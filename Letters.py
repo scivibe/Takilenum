@@ -72,6 +72,19 @@ def draw_letter(letter, ctx, centroidX, centroidY, cornerX, cornerY, glyphSize):
         ctx.stroke()
         ctx.restore()
 
+    elif letter == "g":
+        print("g")
+        ctx.save()
+        ctx.translate(centroidX, centroidY)
+        ctx.rotate(ang)
+        ctx.move_to(0.3 * l, 0.0 * l)
+        ctx.line_to(0.48 * l, -0.3 * l)
+        ctx.stroke()
+        ctx.move_to(0.48 * l, -0.1 * l)
+        ctx.line_to(0.06 * l, -0.1 * l)
+        ctx.stroke()
+        ctx.restore()
+
     elif letter == "q":
         print("q")
         ctx.save()
@@ -349,3 +362,29 @@ def draw_letter(letter, ctx, centroidX, centroidY, cornerX, cornerY, glyphSize):
 
         ctx.stroke()
         ctx.restore()
+
+    elif letter == "C":
+        print("ch")
+        ctx.save()
+        ctx.translate(centroidX, centroidY)
+        ctx.rotate(ang)
+
+
+        ctx.move_to(0.1 * l, 0.1 * l)
+        ctx.line_to(0.3 * l, -0.1 * l)
+        ctx.stroke()
+
+        ctx.move_to(0.3 * l, 0.1 * l)
+        ctx.line_to(0.4 * l, 0.0 * l)
+        ctx.stroke()
+
+        ctx.move_to(0.1 * l, -0.1 * l)
+        ctx.line_to(0.2 * l, 0.0 * l)
+        ctx.stroke()
+
+        ctx.stroke()
+        ctx.restore()
+
+    else:
+        print(f"[ERROR]: Error! Letter {letter} not in use! Please reformat sentence")
+        exit(-1)
