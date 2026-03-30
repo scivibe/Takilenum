@@ -121,12 +121,20 @@ def write_takilenum(inputString, outputFile="glyph.png", maxGlyphPerRow=10, glyp
     for i, glyph in enumerate(glyphs):
 
         #Start with enclosing triangle
-        c1x = glyphX - s/2
-        c3x = glyphX + s/2
-        c2x = glyphX
-        c1y = glyphY + (glyphSign*h/2)
-        c3y = glyphY + (glyphSign*h/2)
-        c2y = glyphY - (glyphSign*h/2)
+        if (glyphDir == 1):
+            c1x = glyphX - s/2
+            c3x = glyphX + s/2
+            c2x = glyphX
+            c1y = glyphY + (glyphSign*h/2)
+            c3y = glyphY + (glyphSign*h/2)
+            c2y = glyphY - (glyphSign*h/2)
+        else:
+            c3x = glyphX - s/2
+            c1x = glyphX + s/2
+            c2x = glyphX
+            c3y = glyphY + (glyphSign*h/2)
+            c1y = glyphY + (glyphSign*h/2)
+            c2y = glyphY - (glyphSign*h/2)
 
         centroidX = glyphX
         centroidY = glyphY + (glyphSign * h/6)
