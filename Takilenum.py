@@ -35,8 +35,10 @@ x
 h
 '''
 
-write_takilenum("The quick brown fox jumps over the lazy dog", outputFile="glyph1.png", maxGlyphPerRow=4, doLongVowels=False)
-
+write_takilenum("this is a test of takiilenum script in english mode", outputFile="glyph1.png", maxGlyphPerRow=6, doLongVowels=False)
+write_takilenum("this is a test of takiilenum script in takiilenum mode and also bigger and longer script giving more and more wrapping", outputFile="glyph2.png", maxGlyphPerRow=4, glyphSize=500, doLongVowels=True)
+write_takilenum("and this here is one last sentence to just show off the rest of the features ive got notice how there is no puncuation or apostrophes or shit like that", outputFile="glyph3.png", maxGlyphPerRow=10, glyphSize=250, doLongVowels=True, writingColor=(1.0, 0.0, 0.0), backgroundColor=(0.0, 0.0, 1.0), padding=10)
+write_takilenum("The quick brown fox jumps over the lazy dog", outputFile="glyph4.png", maxGlyphPerRow=6, doLongVowels=False)
 
 import numpy as np
 import matplotlib.pyplot as plt
